@@ -1,0 +1,13 @@
+.btn{
+    border-radius: 2em;
+    color:inherit;
+    transition: opacity .3s;
+    &:hover{
+        cursor: pointer;
+        opacity: .8;
+    }
+}
+.btn--important{
+    @extend .btn;
+    font-weight: bold;
+}
