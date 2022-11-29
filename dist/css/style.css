@@ -1,3 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
 .btn, .btn--important, .header .insideBtn {
   border-radius: 2em;
   color: inherit;
@@ -10,15 +19,6 @@
 
 .btn--important, .header .insideBtn {
   font-weight: bold;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  padding: 0;
-  margin: 0;
 }
 
 .header {
@@ -77,4 +77,88 @@ body {
   background-color: #db1c39;
   transform: translate(-2%, -62%);
   border: none;
+}
+
+.about {
+  width: 65%;
+  margin: auto;
+  font-size: 20px;
+}
+.about .main__article {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about p {
+  display: block;
+}
+.about .article__title {
+  font-size: 2.2em;
+}
+.about .article__subtitle {
+  font-size: 18px;
+  width: 70%;
+}
+.about .instruction {
+  text-align: start;
+  position: relative;
+  overflow: hidden;
+}
+.about .instruction__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.about .instruction__point {
+  margin-left: 5em;
+  width: 70%;
+  position: relative;
+}
+.about .instruction__point::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: white;
+  border: 3px solid black;
+  top: 0.4em;
+  left: -1.2em;
+  z-index: 1;
+}
+.about .instruction__point::before {
+  content: "";
+  display: block;
+  width: 1px;
+  background-color: rgb(158, 142, 142);
+  position: absolute;
+  top: 0.4em;
+  left: -0.9em;
+  height: calc(100% + 1.5em);
+}
+.about .instruction__point:last-child::before {
+  display: none;
+}
+.about .instruction__point--title {
+  margin-bottom: 0.5em;
+  font-size: 26px;
+}
+.about .line {
+  width: 1px;
+  background-color: rgb(136, 136, 136);
+  position: absolute;
+  min-height: 390px;
+  top: 35px;
+  left: calc(6em + 2px);
+  z-index: 0;
+}
+
+.footer {
+  background-color: rgb(135, 199, 227);
+  color: white;
+  margin-top: 1em;
+  padding: 1em 0;
+  text-align: center;
 }
