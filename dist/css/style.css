@@ -7,18 +7,25 @@ body {
   margin: 0;
 }
 
-.btn, .btn--important, .header .insideBtn {
+.btn, .btn--form, .btn--important, .header .insideBtn {
   border-radius: 2em;
   color: inherit;
   transition: opacity 0.3s;
+  padding: 0.4em 1em;
+  border: none;
 }
-.btn:hover, .btn--important:hover, .header .insideBtn:hover {
+.btn:hover, .btn--form:hover, .btn--important:hover, .header .insideBtn:hover {
   cursor: pointer;
   opacity: 0.8;
 }
 
 .btn--important, .header .insideBtn {
   font-weight: bold;
+}
+
+.btn--form {
+  background-color: #db1c39;
+  color: white;
 }
 
 .header {
@@ -161,4 +168,52 @@ body {
   margin-top: 1em;
   padding: 1em 0;
   text-align: center;
+}
+
+.createEvent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  counter-reset: newMember;
+}
+.createEvent .createEvent__form {
+  transform: translateY(-10%);
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+}
+.createEvent label {
+  float: left;
+}
+.createEvent .input--basic, .createEvent .memberName {
+  height: 2em;
+}
+.createEvent .membersList {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/3;
+  gap: 0.5em;
+  padding: 0;
+  margin: 0;
+}
+.createEvent #createEventBtn {
+  grid-column: 1/3;
+  width: 70%;
+  margin: auto;
+}
+.createEvent .members__item::before {
+  counter-increment: newMember;
+  font-weight: bold;
+  content: "#" counter(newMember);
+}
+.createEvent .memberName {
+  width: 80%;
+}
+.createEvent #addMoreBtn {
+  grid-column: 2/3;
 }

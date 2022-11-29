@@ -16,7 +16,10 @@ gulp.task("copyHTML", (done) => {
     gulp.src("src/templates/*.html")
     .pipe(gulp.dest("dist/templates"));
     done();
-})
+});
+gulp.task("scripts", (done) => {
+    
+});
 gulp.task("ts", (done) => {
     tsProject.src()
     .pipe(tsProject()).js

@@ -1,7 +1,10 @@
+@use '../abstracts/colors' as colors;
 .btn{
     border-radius: 2em;
     color:inherit;
     transition: opacity .3s;
+    padding:.4em 1em;
+    border:none;
     &:hover{
         cursor: pointer;
         opacity: .8;
@@ -10,4 +13,9 @@
 .btn--important{
     @extend .btn;
     font-weight: bold;
+}
+.btn--form{
+    @extend .btn;
+    background-color:colors.$santaHat;
+    color:white;
 }
