@@ -5,9 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GiftDrawer</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <h1 id="eventName"></h1>
+    <header>
+        <h1>GiftDrawer</h1>
+    </header>
+    <main class="event__container">
+        <section class="event__info">
+            <seciton class="drawing__info">
+                <button class="btn--draw">Losuj!</button>
+                <p class="txt--title">
+                    Dajesz prezent użytkownikowi:
+                </p>
+            </seciton>
+            <section class="party__info">
+                <strong class="txt--title">Szczegóły wydarzenia</strong>
+                <strong id="eventTitle">Event:</strong>
+                <p> Limit cenowy:<strong id="maxPrice"></strong>zł</p>
+            </section>
+        </section>
+        <section id="event__members">
+            <div class="member--header">
+
+                <span class="item--left">Uczestnik</span>
+                <span>Lista prezentów</span>
+                <span class="item--right">Edycja</span>
+            </div>
+
+            
+        </section>
+
+    </main>
+    <footer></footer>    
+    
     <script type="module" src="../js/EventView.js"></script>
 </body>
 </html>

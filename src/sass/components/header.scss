@@ -11,6 +11,10 @@ $mainInputHeight:3em;
     align-items: center;
     font-family: Lato;
     justify-content: center;
+    a{
+        color:inherit;
+    }
+    
     background: {
         image: url("../img/bg__giftBlue.jpg");
         size: 100% 100vh;

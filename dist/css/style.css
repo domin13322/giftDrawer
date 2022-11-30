@@ -7,14 +7,19 @@ body {
   margin: 0;
 }
 
-.btn, .btn--form, .btn--important, .header .insideBtn {
+a {
+  color: inherit;
+}
+
+.btn, .btn--edit, .btn--draw, .btn--form, .btn--important, .header .insideBtn {
   border-radius: 2em;
   color: inherit;
   transition: opacity 0.3s;
   padding: 0.4em 1em;
   border: none;
+  background-color: #db1c39;
 }
-.btn:hover, .btn--form:hover, .btn--important:hover, .header .insideBtn:hover {
+.btn:hover, .btn--edit:hover, .btn--draw:hover, .btn--form:hover, .btn--important:hover, .header .insideBtn:hover {
   cursor: pointer;
   opacity: 0.8;
 }
@@ -26,6 +31,19 @@ body {
 .btn--form {
   background-color: #db1c39;
   color: white;
+}
+
+.btn--draw {
+  background-color: rgb(35, 158, 35);
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+}
+
+.btn--edit {
+  max-width: 8em;
+  color: white;
+  font-weight: bold;
 }
 
 .header {
@@ -41,6 +59,9 @@ body {
   background-image: url("../img/bg__giftBlue.jpg");
   background-size: 100% 100vh;
   background-repeat: no-repeat;
+}
+.header a {
+  color: inherit;
 }
 .header .inputField {
   width: 80%;
@@ -172,6 +193,10 @@ body {
 
 .createEvent {
   width: 100%;
+  height: 100vh;
+  background-image: url("../img/bg__giftBlue.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -216,4 +241,70 @@ body {
 }
 .createEvent #addMoreBtn {
   grid-column: 2/3;
+}
+
+#eventTitle {
+  font-family: Serif;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.txt--title {
+  font-family: inherit;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 0.4em;
+}
+
+header {
+  background-color: rgb(135, 199, 227);
+  padding: 2em 0;
+  color: white;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.event__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin-bottom: 3em;
+  margin: auto;
+}
+.event__container .event__info {
+  display: flex;
+  align-self: flex-end;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+.event__container .party__info {
+  background-color: rgb(250, 239, 239);
+  padding: 1em 3em;
+  display: flex;
+  flex-direction: column;
+}
+.event__container #event__members {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 100%;
+}
+.event__container .member, .event__container .member--header {
+  padding: 0.5em 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+.event__container .member--header {
+  font-weight: bold;
+  border-bottom: dotted 4px rgb(135, 199, 227);
+}
+.event__container .item--left {
+  justify-self: start;
+}
+.event__container .item--right {
+  justify-self: end;
 }

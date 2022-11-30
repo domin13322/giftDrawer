@@ -1,11 +1,11 @@
 import PartyMember from "./PartyMember";
 export default class Event{
-    private _name : string;
-    private _date : Date;
-    private _maxPrice: number;
-    private _password : string;
-    private _members : Array<PartyMember>;
-    private _id: number;
+    public _name : string;
+    public _date : Date;
+    public _maxPrice: number;
+    public _password : string;
+    public _members : Array<PartyMember>;
+    public _id: number;
     constructor(name : string,date : Date, maxPrice = 0, 
         password :string, members : Array<PartyMember> ){
         this._name = name;

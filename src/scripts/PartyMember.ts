@@ -1,5 +1,5 @@
 export default class PartyMember{
-    private _name : string;
+    public _name : string;
     constructor(name : string) {
         this._name = name;
     }

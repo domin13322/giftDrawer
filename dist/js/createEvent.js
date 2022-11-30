@@ -39,7 +39,12 @@ const createEvent = () => {
 };
 createEventBtn === null || createEventBtn === void 0 ? void 0 : createEventBtn.addEventListener('click', () => {
     const event = createEvent();
-    const event_json = JSON.stringify(event);
-    localStorage.setItem(event.id.toString(), event_json);
-    location.href = `http://127.0.0.1:5500/dist/templates/event.html?id=${event.id}`;
+    let events_local = localStorage.getItem("events");
+    if (events_local === null)
+        events_local = "[]";
+    const events = JSON.parse(events_local);
+    events.push(event);
+    const events_json = JSON.stringify(events);
+    localStorage.setItem("events", events_json);
+    location.href = `http://127.0.0.1:5500/dist/templates/login.html`;
 });
