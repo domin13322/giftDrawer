@@ -6,6 +6,8 @@ export default class Event{
     public _password : string;
     public _members : Array<PartyMember>;
     public _id: number;
+    public membersToDraw : Array<PartyMember>;
+    public currentUser : PartyMember;
     constructor(name : string,date : Date, maxPrice = 0, 
         password :string, members : Array<PartyMember> ){
         this._name = name;
@@ -13,8 +15,10 @@ export default class Event{
         this._maxPrice = maxPrice;
         this._password = password;
         this._members = members;
+        this.membersToDraw = members;
         this._id = Date.now();
     }
+    
     get name() { return this._name; }
     get date() { return this._date;}
     get maxPrice() { return this._maxPrice}
@@ -22,6 +26,6 @@ export default class Event{
     get members() { return this._members}
     get id(){ return this._id}
     set name(name: string) { this._name = name;}
-    set date(date: Date) { this._date = date}
-    set maxPrice (maxPrice: number) { this._maxPrice = maxPrice}
+    set date(date: Date) { this._date = date};
+    set maxPrice (maxPrice: number) { this._maxPrice = maxPrice};
 }

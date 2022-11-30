@@ -8,16 +8,30 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <div id="loadingWindow">
+        <div id="loader">
+
+        </div>
+        <p id="chosenUser" class="txt--title">
+
+        </p>
+    </div>
     <header>
-        <h1>GiftDrawer</h1>
+        <h1><a style="text-decoration:none;" href="index.html">GiftDrawer</a></h1>
     </header>
     <main class="event__container">
         <section class="event__info">
             <seciton class="drawing__info">
-                <button class="btn--draw">Losuj!</button>
-                <p class="txt--title">
-                    Dajesz prezent użytkownikowi:
+                <p id="greetUser" class="txt--title">
+                    Hello 
                 </p>
+                <p class="txt--title" id="memberToGive">
+                   Robisz prezent dla:
+                </p>
+                <button id="drawBtn" class="btn--draw">Losuj!</button>
+                <button class="btn--form">
+                    Dodaj listę życzeń
+                </button>
             </seciton>
             <section class="party__info">
                 <strong class="txt--title">Szczegóły wydarzenia</strong>

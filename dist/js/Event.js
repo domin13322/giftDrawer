@@ -5,6 +5,7 @@ export default class Event {
         this._maxPrice = maxPrice;
         this._password = password;
         this._members = members;
+        this.membersToDraw = members;
         this._id = Date.now();
     }
     get name() { return this._name; }
@@ -15,5 +16,7 @@ export default class Event {
     get id() { return this._id; }
     set name(name) { this._name = name; }
     set date(date) { this._date = date; }
+    ;
     set maxPrice(maxPrice) { this._maxPrice = maxPrice; }
+    ;
 }
